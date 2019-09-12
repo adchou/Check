@@ -20,11 +20,40 @@ using namespace std;
 	from the keyboard or a file. Remember to use getline to read the 
 	payto.  */
 
+
     	} 
     void Check::output(std::ostream& outs)const{
 	/* You are to write the implementation of this function to write 
 	to the monitor or to a file. Remember not to put labels into the 
 	file.*/
+
+	}
+	void load_from_file(istream& ins, const Check& c)
+	{
+		double tempAmount;
+		int checknum;
+		Date date;
+		string payto;
+		while(ins.peek() == '\n' || ins.peek() == '\r')
+		{
+			ins.ignore();
+		}
+		while(!ins.eof())
+		{
+		ins >> tempAmount;
+		ins >> checknum;
+		ins >> date;
+		ins >> payto;
+		
+		}    
+	}
+	
+	int deposit(ostream& outs, const Check& c)
+	{
+		double currentBalance = c.get_amount();
+		double depamount = c;
+		double newBalance = currentBalance + depamount;
+		
 
 	}
 
