@@ -14,6 +14,7 @@ operator.
 
 #include<iostream>
 #include<string>
+#include <cctype>
 #include "date.h"
 
 class Check{
