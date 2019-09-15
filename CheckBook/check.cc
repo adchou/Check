@@ -6,7 +6,6 @@ below.
 	John Dolan	Ohio University		September 2019
 ******************************************************************/
 #include "check.h"
-#include <cctype>
 using namespace std;
 
     Check::Check(Date d, string p, int num,double amt){
@@ -21,13 +20,14 @@ using namespace std;
 	from the keyboard or a file. Remember to use getline to read the 
 	payto.  */
 
+		//reading into the private variables
 		ins >> amount;
 		ins >> checknum;
 		ins >> date;
 		
 		while(ins.peek() == '\n' || ins.peek() == '\r')
 		{
-			ins.ignore();
+			ins.ignore();// clear out leftover newlines
 		}
 		 getline(ins, payto);
 		
